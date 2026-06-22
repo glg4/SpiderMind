@@ -1,0 +1,56 @@
+=========================================
+ SpiderMind 慢病智能管理平台 v2.4
+ 快速使用指南
+=========================================
+
+【首次使用 — 只需 3 步】
+1. 双击 setup.bat → 自动安装依赖
+2. 获取 Token：https://www.coze.cn → 个人中心 → 访问令牌 → 新建令牌
+3. 用记事本打开 .env，粘贴 Token，保存
+4. 双击 启动SpiderMind.bat → 自动打开浏览器
+
+【日常启动】
+双击 启动SpiderMind.bat（脚本会自动检测环境、端口、依赖）
+
+【获取 Coze Token（免费）】
+→ 打开 https://www.coze.cn
+→ 微信/手机号登录
+→ 右上角头像 → 个人中心
+→ 左侧"访问令牌" → 新建令牌
+→ 过期时间选"无过期时间"，权限勾选 chat
+→ 点击确认，复制 Token
+→ 粘贴到 .env 文件中的 COZE_API_TOKEN= 后面
+
+【功能入口】
+  报告上传 → 上传 Excel/CSV/图片检查报告
+  临床指南 → 搜索最新临床指南
+  AI 解读  → AI 自动分析报告 + 导出 HTML 报告
+  健康问答 → 向 AI 提问健康问题
+  慢病履历 → 查看历史记录和趋势图
+  用药提醒 → 设置用药计划并打卡
+  健康任务 → 设定每日健康目标
+
+【常见问题】
+Q: 双击 bat 闪退？
+A: 未安装 Python，请先安装 Python 3.9+
+   下载：https://www.python.org/downloads/
+   ⚠ 安装时勾选 "Add Python to PATH"
+
+Q: 依赖安装失败？
+A: 网络问题；打开 CMD，进入 SpiderMind 目录，输入：
+   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+Q: Token 无效？
+A: Token 可能过期，重新获取（见上方教程）
+
+Q: 端口被占用？
+A: 脚本已内置自动切换端口，查看 CMD 窗口提示的实际地址
+
+【详细说明】
+请阅读 部署指南.md 获取完整教程和故障排除
+
+【注意事项】
+- 数据存储在本地 data/ 目录
+- Token 设为无过期时间可长期使用
+- AI 分析仅供参考，不构成医疗建议
+- .env 文件包含 Token，不要分享给他人
